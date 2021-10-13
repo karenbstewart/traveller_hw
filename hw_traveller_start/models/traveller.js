@@ -45,5 +45,16 @@ Traveller.prototype.getUniqueModesOfTransport = function () {
   return unique;   
 };
 
+Traveller.prototype.getUniqueModesOfTransport1 = function (){
+  let unique = [];  
+  this.journeys.forEach((journey ) => {  
+    if(!unique.includes(journey.transport )){  
+      unique.push(journey.transport );  
+    }  
+  }); 
+  return unique;  
+};
+ 
+
 
 module.exports = Traveller;
